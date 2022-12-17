@@ -13,7 +13,7 @@ if ($result){
     if($result->num_rows ==1) {
         header("Location:docdashboard.html");
     }
-else{echo "incorect 1";}
+else{echo "incorect 1  login";}
     
 }
 else{echo "incorect 2";}
