@@ -18,8 +18,7 @@ session_start();
             <input name="pat_id" type="text" placeholder="Patient_id">
             <button type = "submit">Submit</button>
         </form>
-     
-    </div>
+     </div>
 </body>
 </html>
 
