@@ -1,18 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 header .header{
   background-color: #fff;
-  height: 45px;
+  height: 65px;
 }
 header a img{
   width: 134px;
-margin-top: 4px;
+  margin-top: 4px;
 }
-.patient-details {
+.login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
 }
-.patient-details .form .login{
+.login-page .form .login{
   margin-top: -31px;
 margin-bottom: 26px;
 }
@@ -52,12 +52,12 @@ margin-bottom: 26px;
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form .message {
+.form .message{
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.form  .message a {
   color: #4CAF50;
   text-decoration: none;
 }
@@ -65,7 +65,7 @@ margin-bottom: 26px;
 .container {
   position: relative;
   z-index: 1;
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
