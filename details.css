@@ -17,14 +17,28 @@ header a img{
 margin-bottom: 26px;
 }
 .form {
+  
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  max-width: 60%;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.details-form{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+
+}
+.input-table{
+
+  width: 40%;
+
+  padding: 10px;
+  margin: 20px;
 }
 .form input {
   font-family: "Roboto", sans-serif;
