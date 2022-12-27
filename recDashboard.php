@@ -17,53 +17,53 @@
             <form class="details-form" method="post" >
                 <table class="input-table">
                     <tr>
-                <td><label for="fname">First name:</label></td>
-                <td><input type="text" placeholder="firstname" id="fname" name="fname"/></td>
+                <td><label for="pat_name">Name:</label></td>
+                <td><input type="text" id="pat_name" name="pat_name"/></td>
                     </tr>
                     <tr>
-                        <td><label for="lname">Last name:</label></td>
-                        <td><input type="text" placeholder="lastname" id="lname" name="lname"/></td>
+                        <td><label for="lname">Patientid:</label></td>
+                        
                     </tr>
                     <tr>
-                        <td><label for="Age">Age:</label></td>
-                        <td><input type="text" placeholder="Age" id="Age" name="Age"/></td>
+                        <td><label for="pat_age">Age:</label></td>
+                        <td><input type="text" id="pat_age" name="pat_age"/></td>
                    </tr>
             <tr>
-                <td><label for="Doctor">Doctor:</label></td>
-                <td><input type="text" placeholder="Doctor" id="Doctor" name="Doctor"/></td>
+                <td><label for="pat_dp">Pshoto:</label></td>
+                <td><input type="file" id="pat_dp" name="pat_dp" accept="image/*"/></td>
             </tr>
             
             <tr>
-                <td><label for="Gender">Gender:</label></td>
-                <td><input type="text" placeholder="Gender" id="Gender" name="Gender"/></td>
+                <td><label for="pat_gen">Gender:</label></td>
+                <td><input type="text" id="pat_gen" name="pat_gen"/></td>
             </tr>
         </table>
             <table class="input-table" >
             <tr>
-                <td><label for="height">Height:</label></td>
-                <td><input type="text" placeholder="height" id="height" name="height"/></td>
+                <td><label for="pat_ht">Height:</label></td>
+                <td><input type="text" id="pat_ht" name="pat_ht"/></td>
             </tr>
             <tr>
-                <td><label for="Weight">Weight:</label></td>
-                <td><input type="text" placeholder="Weight" id="Weight" name="Weight"/></td>
+                <td><label for="pat_wt">Weight:</label></td>
+                <td><input type="text" id="pat_wt" name="pat_wt"/></td>
             </tr>
             <tr>
-                <td><label for="Blood-Group">Blood Group:</label></td>
-                <td><input type="text" placeholder="Blood-Group" id="Blood-Group" name="Blood-Group"/></td>
+                <td><label for="pat_bg">Blood Group:</label></td>
+                <td><input type="text" id="pat_bg" name="pat_bg"/></td>
             </tr>
             <tr>
-                <td><label for="Insurance Number">Insurance Number:</label></td>
-                <td><input type="text" placeholder="Insurance Number" id="Insurance Number" name="Insurance Number"/></td>
+                <td><label for="pat_insu">Insurance Number:</label></td>
+                <td><input type="text" id="pat_insu" name="pat_insu"/></td>
             </tr>
             <tr>
-                <td><label for="Phoneno">Phoneno:</label></td>
-                <td><input type="text" placeholder="Phoneno" id="Phoneno" name="Phoneno"/></td>
+                <td><label for="patphno">Phoneno:</label></td>
+                <td><input type="text" id="pat_phno" name="pat_phno"/></td>
             </tr>
             <tr>
                 <td></td>
                 <td><button>submit</button></td>
             </tr>
-            <tr>
+            
             </table>
             
             </form>
