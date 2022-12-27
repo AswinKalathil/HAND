@@ -58,8 +58,6 @@ if ($result){
             echo "<script>window.location.href='recDashboard.php';</script>";
             exit;
         }
-
-
     }
     
 }
