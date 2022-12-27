@@ -1,3 +1,14 @@
 td {
     padding: 0 15px;
   }
+
+  .card{
+    border: 1px solid black;
+    width: 800px;
+    height: 250px;
+    -ms-grid-column-align: center;
+  }
+
+  .card1{
+    border: 1px solid black;
+  }
