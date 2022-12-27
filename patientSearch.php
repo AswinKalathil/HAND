@@ -1,3 +1,4 @@
+<?php
 require 'connection.php';
 session_start();
 $patid= $_POST['pat_id'];
