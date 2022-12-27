@@ -55,7 +55,7 @@ if ($result){
             exit;
         }
         else if($myid[0]=='R'){
-            echo "<script>window.location.href='recDashboard.html';</script>";
+            echo "<script>window.location.href='recDashboard.php';</script>";
             exit;
         }
 
