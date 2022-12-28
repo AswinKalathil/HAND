@@ -1,148 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;} 
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="/images/medicine.png">
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="hero" style="background-image: url('images/hosp.jpg');">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
 
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
-body {
-  background-image: url('./pics/Group of doctors standing at hospital building.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 90% 110%;
-}
-
-  </style>
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    
-     
-      <h1>Welcome</h1>
-      <p>We focus on providing efficient healthcare facility with love and care</p>
-      <hr>
-      <h3>Please Login to continue</h3>
-      <div class="dropdown">
-        <button class="dropbtn">Login</button>
-        <div class="dropdown-content">
-          <a href="login.php">Doctor</a>
-          <a href="login.php">Receptionist</a>
+     <div class="top-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=yourdomain@name.com" target="_blank"><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">yourdomain@name.com</span></a>
+              <span class="mx-md-2 d-inline-block"></span>
+              <a href="tel:0484-123456" class=""><span class="mr-2  icon-phone"></span> <span class="d-none d-md-inline-block">0484-123456</span></a>
+            </div>
+          </div>
         </div>
       </div>
-    
-    
-    
-  </div>
-</div>
 
-<footer class="container-fluid text-center">
-  <p>stmaryshospital@gmail.com</p>
-</footer>
-
-</body>
+      <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            <div class="site-logo">
+              <a href="index.html" class="text-black"><img src="images/hospital.png" alt="hosp"></a>
+            </div>
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="#home-section" class="nav-link">Home</a></li>
+                  <li><a href="#services-section" class="nav-link">Services</a></li>
+                  <li class="has-children">
+                    <a href="#about-section" class="nav-link">About Us</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#team-section" class="nav-link">Team</a></li>
+                      <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#why-us-section" class="nav-link">Why Us</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+           <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+          </div>
+        </div>
+      </header>
+      
+        <div class="wrapper">
+          <div class="title-text">
+            <div class="title login">Login as Doctor</div>
+            <div class="title signup">Login as Receptionist</div>
+          </div>
+          <div class="form-container">
+            <div class="slide-controls">
+              <input type="radio" name="slide" id="login" checked>
+              <input type="radio" name="slide" id="signup">
+              <label for="login" class="slide login">Doctor</label>
+              <label for="signup" class="slide signup">Receptionist</label>
+              <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+              <form action="#" class="login">
+                <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required>
+                </div> 
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Login" style="padding-top: 2px;">
+                </div>                
+              </form>
+              <form action="#" class="signup">
+                <div class="field">
+                  <input type="text" placeholder="Email Address" required>
+                </div>
+                <div class="field">
+                  <input type="password" placeholder="Password" required>
+                </div>
+                <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="submit" value="Login">
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/log.js"></script>
+  </body>
 </html>
