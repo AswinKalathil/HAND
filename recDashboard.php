@@ -129,8 +129,11 @@ VALUES ('$pat_name','PAT$pat_id','$pat_phno','$pat_dp','$pat_gen','$pat_bg', '$p
 $result = $conn -> query($sql);
 
 if ($result){
+   
+    echo " <h2 class =\"output-msg\">INSERTED SUCCESFULLY</h2>";
+    echo "<script>alert(\"insertion successfull\")</script> ";
     echo "<script>window.location.href='recDashboard.php';</script>";
-            exit; 
+           
 }
 else{echo " sql result error ".mysqli_error($conn);}
 }

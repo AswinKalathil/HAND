@@ -76,12 +76,14 @@
               <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-              <form action="#" class="login">
+              <form action="login.php" class="login" method="post">
                 <div class="field">
-                  <input type="text" placeholder="Email Address" required>
+                  <input type="hidden" name="loginForm" value=""/>
+                  
+                  <input name="userid" type="text"  placeholder="User ID" required>
                 </div>
                 <div class="field">
-                  <input type="password" placeholder="Password" required>
+                  <input name="userpass" type="password" placeholder="Password" required>
                 </div> 
                 <div class="field btn">
                   <div class="btn-layer"></div>
