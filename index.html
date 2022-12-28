@@ -12,7 +12,9 @@
     <title>Welcome</title>
   </head>
   <body>
-    <div class="hero" style="background-image: url('images/hosp.jpg');">
+    <div class="hero" style="background-image: url('images/hosp.jpg');    background-size: 55%;
+    background-position-y: bottom;
+    background-position-x: 35%; ;">
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
@@ -90,12 +92,14 @@
                   <input type="submit" value="Login" style="padding-top: 2px;">
                 </div>                
               </form>
-              <form action="#" class="signup">
+              <form action="login.php" class="signup" method="post">
                 <div class="field">
-                  <input type="text" placeholder="Email Address" required>
+                  <input type="hidden" name="loginForm" value=""/>
+
+                  <input name="userid" type="text" placeholder="User ID" required>
                 </div>
                 <div class="field">
-                  <input type="password" placeholder="Password" required>
+                  <input name="mypass" type="password" placeholder="Password" required>
                 </div>
                 <div class="field btn">
                   <div class="btn-layer"></div>
