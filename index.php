@@ -148,7 +148,7 @@ echo "<script>errorfixMessage();</script>";
         var error = document.getElementById("error")
 
             // Changing content and color of content
-            error.textContent = "Please enter  a valid userid password"
+            error.textContent = "Please enter a valid userID and Password"
             error.style.color = "red"
             setTimeout(function() {
                 error.textContent = ""
