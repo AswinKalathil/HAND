@@ -152,7 +152,7 @@ echo "<script>errorfixMessage();</script>";
             error.style.color = "red"
             setTimeout(function() {
                 error.textContent = ""
-      }, 1000);
+      }, 5000);
         
            
       
