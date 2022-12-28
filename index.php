@@ -45,7 +45,7 @@ echo "<script>errorfixMessage();</script>";
         <div class="container">
           <div class="row align-items-center position-relative">
             <div class="site-logo">
-              <a href="index.html" class="text-black"><img src="images/hospital.png" alt="hosp"></a>
+              <a href="index.php" class="text-black"><img src="images/hospital.png" alt="hosp"></a>
             </div>
             <div class="col-12">
               <nav class="site-navigation text-right ml-auto " role="navigation">
