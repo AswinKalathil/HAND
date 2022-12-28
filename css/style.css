@@ -567,6 +567,9 @@ form .field input:focus::placeholder{
 .form-inner form .signup-link a:hover{
   text-decoration: underline;
 }
+.error-field{
+  padding: 10px;
+}
 form .btn{
   height: 75px;
   width: 100%;

@@ -36,7 +36,7 @@ function getPatid(){
             <div class="details">
                 <div class="details-header">
                 <h1>New Patient</h1>
-                    <span class="id-display"><h3>REC201</h3></span> 
+                    <span class="id-display"><h3 id="success-msg" ></h3><h3>REC201</h3></span> 
 
                 </div>
             </div>
@@ -102,6 +102,40 @@ function getPatid(){
 
     </div>
 </body>
+
+<script>
+
+
+      // const error = document.querySelector("error");
+      function beforInsertion() {
+        var error = document.getElementById("success-msg")
+
+            // Changing content and color of content
+            error.textContent = ""
+            error.style.color = "green"
+      }
+     
+      function successInsertion() {
+        var error = document.getElementById("success-msg")
+
+            // Changing content and color of content
+
+            error.textContent = "INSERTION SUCCESSFULL"
+            error.style.color = "green"
+            setTimeout(function() {
+                error.textContent = ""
+      }, 1000);
+      }
+      function unsuccessInsertion() {
+        var error = document.getElementById("success-msg")
+
+            // Changing content and color of content
+            error.textContent = "INSERTION UNSUCCESSFULL"
+            error.style.color = "red"
+      } 
+      
+    
+</script>
 </html>
 <?php
 if(isset($_POST['patientform']))
@@ -130,11 +164,24 @@ $result = $conn -> query($sql);
 
 if ($result){
    
-    echo " <h2 class =\"output-msg\">INSERTED SUCCESFULLY</h2>";
-    echo "<script>alert(\"insertion successfull\")</script> ";
-    echo "<script>window.location.href='recDashboard.php';</script>";
+  
+    // echo "<script>alert(\"insertion successfull\")</script> ";
+    if(isset($_POST['pat_name'])){
+    echo "<script>successInsertion();</script>" ;
+   
+        
+    }
+
+    // echo "<script>window.location.href='recDashboard.php';</script>";
            
 }
-else{echo " sql result error ".mysqli_error($conn);}
+// else{echo " sql result error ".mysqli_error($conn);}
+else{
+    echo "<script>alert(\"insertion unsuccessfull\")</script> ";
+    echo "<script>console.log('recDashboard.php');</script>";
+    echo "<script>unsuccessInsertion();</script>" ;
+}
+
+
 }
 ?>

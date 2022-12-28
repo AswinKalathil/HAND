@@ -1,3 +1,8 @@
+<?php
+require 'connection.php';
+session_start();
+echo "<script>errorfixMessage();</script>";
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -70,6 +75,7 @@
             <div class="title signup">Login as Receptionist</div>
           </div>
           <div class="form-container">
+          
             <div class="slide-controls">
               <input type="radio" name="slide" id="login" checked>
               <input type="radio" name="slide" id="signup">
@@ -78,38 +84,80 @@
               <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-              <form action="login.php" class="login" method="post">
+
+              <form action="index.php" class="login" method="post">
                 <div class="field">
                   <input type="hidden" name="loginForm" value=""/>
-                  
+                  <input type="hidden" name="doc" value=""/>
                   <input name="userid" type="text"  placeholder="User ID" required>
                 </div>
                 <div class="field">
                   <input name="userpass" type="password" placeholder="Password" required>
                 </div> 
                 <div class="field btn">
-                  <div class="btn-layer"></div>
+
+                  <div class="btn-layer" ></div>
                   <input type="submit" value="Login" style="padding-top: 2px;">
-                </div>                
+
+                </div>  
+                <div class="error-field">
+                <label id="error"  ></label>
+
+                </div>              
               </form>
-              <form action="login.php" class="signup" method="post">
+              <form action="index.php" class="signup" method="post">
                 <div class="field">
                   <input type="hidden" name="loginForm" value=""/>
+                  <input type="hidden" name="rec" value=""/>
+
 
                   <input name="userid" type="text" placeholder="User ID" required>
                 </div>
                 <div class="field">
-                  <input name="mypass" type="password" placeholder="Password" required>
+                  <input name="userpass" type="password" placeholder="Password" required>
                 </div>
                 <div class="field btn">
                   <div class="btn-layer"></div>
                   <input type="submit" value="Login">
+                  
                 </div>
+                <div class="error-field">
+                <label id="error"  ></label>
+
+                </div> 
+               
               </form>
             </div>
         </div>
       </div>
     </div>
+    <script>
+      // const error = document.querySelector("error");
+      function errorfixMessage() {
+        var error = document.getElementById("error")
+
+            // Changing content and color of content
+            error.textContent = ""
+            error.style.color = "yellow"
+        
+           
+      
+    }
+    function errorMessage() {
+      console.log("error msg function")
+        var error = document.getElementById("error")
+
+            // Changing content and color of content
+            error.textContent = "Please enter  a valid userid password"
+            error.style.color = "red"
+            setTimeout(function() {
+                error.textContent = ""
+      }, 1000);
+        
+           
+      
+    }
+</script>
       <script src="js/jquery-3.3.1.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -118,3 +166,61 @@
       <script src="js/log.js"></script>
   </body>
 </html>
+<?php
+if(isset($_POST['loginForm']))
+{
+    
+    $myid=$_POST['userid'];
+  
+    
+
+$mypassword= $_POST['userpass'];
+
+$sql= "SELECT  * 
+FROM staff_view WHERE staff_id = '$myid' 
+AND staff_pass='$mypassword' ";
+$result = $conn -> query($sql);
+
+if ($result){
+    if($result->num_rows ==1) {
+        if($myid[0]=='D'&& isset($_POST['doc'])){
+            echo "<script>window.location.href='docdashboard.php';</script>";
+            exit; 
+        }
+        else if($myid[0]=='A'){
+            echo "<script>window.location.href='admDashboard.html';</script>";
+            exit;
+        }
+        else if($myid[0]=='R' && isset($_POST['rec'])){
+            echo "<script>window.location.href='recDashboard.php';</script>";
+            exit;
+        }
+        
+    }
+    else{
+      if(isset($_POST['userpass']))
+      {
+        echo "<script>errorMessage();</script>";
+
+        echo "<script>console.log(\"incorrect values\")</script>";
+    // echo "<script>alert(\"login unsuccessfull\")</script> ";
+  
+  
+      }
+
+    }
+
+   
+    
+}
+else{
+  echo "<h2>fail</h2>";
+  
+
+
+
+
+}
+
+}
+?>

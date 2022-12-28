@@ -33,7 +33,9 @@ margin-bottom: 26px;
   justify-content:right;
   padding-right: 150px;
 }
-
+#success-msg{
+  padding-right: 30px;
+}
 .details-form{
  
   padding: 20px;
