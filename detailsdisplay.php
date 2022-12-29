@@ -116,40 +116,16 @@ session_start();
             </div>
           </form>
           </div>
-          <div
-            style="
-              border: 3px solid rgb(163, 160, 160);
-              padding-top: 2.4%;
-              padding-left: 2.4%;
-              padding-right: 2.4%;
-            "
-          >
-            <div class="row">
-              <div class="col-md-6">
-                <div class="panel">
-                  <div class=" panel-body">
-                    <div class="bio-desk" >
-                      <h4 class="red">Description</h4>
-                      <p>Fever
-                        sneesing</p>
+          <?php
+          creatCard(5);
+          ?>
+
+
+         
                       
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="panel">
-                  <div class="panel-body">
-                    <div class="bio-desk">
-                      <h4 class="terques">Prescription</h4>
-                      <p>Dolo 650</p>
-                      <p>Cetrizines</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      
+
+
         </div>
       </div>
     </div>
@@ -158,6 +134,42 @@ session_start();
 </html>
 <?php
 
+function creatCard($n){
+
+
+for($i=0;$i<$n;$i++)
+{
+
+echo "<div class=\"card-panel\">
+<div class=\"row\">
+  <div class=\"col-md-6\">
+    <div class=\"panel\">
+      <div class=\" panel-body\">
+        <div class=\"bio-desk\" >
+          <h4 class=\"red\">Description</h4>
+          <p>Fever
+            sneesing</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\"col-md-6\">
+    <div class=\"panel\">
+      <div class=\"panel-body\">
+        <div class=\"bio-desk\">
+          <h4 class=\"terques\">Prescription</h4>
+          <p>Dolo 650</p>
+          <p>Cetrizines</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>";
+
+}
+}
 function search(){
 
 
