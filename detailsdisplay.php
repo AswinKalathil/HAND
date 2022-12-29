@@ -22,7 +22,7 @@ session_start();
     />
     <div class="container bootstrap snippets bootdey">
       <div class="row">
-        <div class="profile-nav col-md-3">
+        <div class="profile-nav col-md-3" >
           <div class="panel">
             <div class="user-heading round">
               <a href="#">
@@ -48,6 +48,44 @@ session_start();
                       <input name="pat_id" type="text" placeholder="Patient_id">
                       <button type = "submit">Submit</button>
                   </form>
+              </li>
+              <li>
+              <div class="">
+              <div class="bio-row1">
+              <h3>Basic Details</h1>
+
+                </div>
+
+                <div class="bio-row1">
+                  <p id="d_age"><span>Age :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Gender :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Weight :</span></p>
+
+
+                </div>
+                <div class="bio-row1">
+                  <p><span>Height :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Blood Group :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Mobile :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Receptionist ID :</span></p>
+                </div>
+                <div class="bio-row1">
+                  <p><span>Insurance No:</span></p>
+                </div>
+              </div>
+              </li>
+              <li>
+                <div style="height: 100px;">fxhb</div>
               </li>
             </ul>
           </div>

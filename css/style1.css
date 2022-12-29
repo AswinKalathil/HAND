@@ -1,4 +1,5 @@
 body {
+    
     color: #030303;
     background: #f1f2f7;
     font-family: 'Open Sans', sans-serif;
@@ -383,9 +384,16 @@ ul.summary-list > li:last-child  {
               padding-right: 2.4%;
               margin-top: 20px;
               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-                background: #FFFFFF;
+              background: #FFFFFF;
+            
 
 
             
           
+}
+.bio-row1{
+    margin-left: 20px;
+}
+h3.bio-row1{
+    margin: 30px;
 }
