@@ -1,56 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="display.css">
-    <title>Document</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style1.css" />
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <div class="container bootstrap snippets bootdey">
+      <div class="row">
+        <div class="profile-nav col-md-3">
+          <div class="panel">
+            <div class="user-heading round">
+              <a href="#">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                  alt=""
+                />
+              </a>
+              <h1>Camila Smith</h1>
+              <p>#<span></span></p>
+            </div>
 
-<div class="details">
-    <table>
-    <tr>
-        <td><img src="./pics/angela.png" alt="img"></td>
-        <td>
-        <table>
-        <tr>
-       <td><h1><label for="pat_name">Name</label></h1></td>
-       </tr>
-       <tr>
-       <td><h4><label for="lname">Patientid</label></h4></td>
-       </tr>
-       </table>
-       </td>
-    </tr>
-    <tr>
-        <td><p><label for="pat_age">Age</label></p></td>
-        <td><p><label for="pat_dp">Photo</label></p></td>
-    </tr>
-    <tr>
-            <td><p><label for="pat_gen">Gender</label></p></td>
-            <td><p><label for="pat_ht">Height</label></p></td>
-    </tr>
-    <tr>
-            <td><p><label for="pat_wt">Weight</label></p></td>
-            <td><p><label for="pat_bg">Blood Group</label></p></td>
-    </tr>
-    <tr>
-            <td><p><label for="pat_insu">Insurance Number</label></p></td>
-            <td><p><label for="patphno">Phoneno</label></p></td>
-    </tr>
-   </table>
- </div>
- <br>
- <br>
- <table class="card">
-    <tr>
-        <td class="card1">abc</td>
-        <td class="card1">abc</td>
-        <td class="card1">abc</td>
-    </tr>
-    
- </table>
- 
- </html>
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active">
+                <a href="#"> <i class="fa fa-user"></i> Profile</a>
+              </li>
+              <li>
+                <a href="#"> <i class="fa fa-edit"></i> Edit profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="profile-info col-md-9">
+          <div class="panel">
+            <div class="bio-graph-heading">PATIENT DETAILS</div>
+            <div class="panel-body bio-graph-info">
+              <h1>Basic Details</h1>
+              <div class="row">
+                <div class="bio-row">
+                  <p><span>Age :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Gender :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Weight :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Height :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Blood Group :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Mobile :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Receptionist ID :</span></p>
+                </div>
+                <div class="bio-row">
+                  <p><span>Insurance No:</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-xs-6">
+              <div class="input-group">
+                <input type="text" class="form-control" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Submit</button>
+                </span>
+              </div>
+            </div>
+            <div class="form-group col-xs-6">
+              <div class="input-group">
+                <input type="text" class="form-control" />
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Submit</button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 3px solid rgb(163, 160, 160);
+              padding-top: 2.4%;
+              padding-left: 2.4%;
+              padding-right: 2.4%;
+            "
+          >
+            <div class="row">
+              <div class="col-md-6">
+                <div class="panel">
+                  <div class="panel-body">
+                    <div class="bio-desk">
+                      <h4 class="red">Description</h4>
+                      <p>Fever</p>
+                      <p>Sneezings</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel">
+                  <div class="panel-body">
+                    <div class="bio-desk">
+                      <h4 class="terques">Prescription</h4>
+                      <p>Dolo 650</p>
+                      <p>Cetrizines</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript"></script>
+  </body>
+</html>
