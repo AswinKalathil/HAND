@@ -43,10 +43,10 @@ session_start();
                 <a href="#"> <i class="fa fa-edit"></i> Edit profile</a>
               </li>
               <li>
-                <form name="patientSearchForm" action="<?php  search(); ?>" method="post">
+                <form name="patientSearchForm" action="" method="post">
                   <input type="hidden" name="patientSearchForm" value=""/>
                       <input name="pat_id" type="text" placeholder="Patient_id">
-                      <button type = "submit">Submit</button>
+                      <button type = "submit" onclick="<?php  search(); ?>">Submit</button>
                   </form>
               </li>
               <li>
@@ -152,41 +152,43 @@ session_start();
                 <button class="btn btn-default" type="submit">Submit</button>
               </span>
             </div>
-          </form>
+            </form>
           </div>
-          <?php
-          creatCard(5);
-          ?>
-
-
-         
-                      
-      
-
-
-        </div>
+          
       </div>
+             
+        </div>
+        <div class="row">
+              <a href="<?php creatCard(search());  ?>">show</a>
+              </div>
     </div>
+    
     <script type="text/javascript"></script>
   </body>
 </html>
 <?php
+'connection.php';
+function creatCard($result){
 
-function creatCard($n){
-
+$n=$result->num_rows;
 
 for($i=0;$i<$n;$i++)
 {
+  $row = $result->fetch_assoc();
+$desc=$row['pat_desc'];
+$pre=$row['pat_pre'];
 
-echo "<div class=\"card-panel\">
+if($i==1)
+{}
+echo "
+<div class=\"card-panel\">
 <div class=\"row\">
   <div class=\"col-md-6\">
     <div class=\"panel\">
       <div class=\" panel-body\">
-        <div class=\"bio-desk\" >
+        <div class=\"bio-desk\"  >
           <h4 class=\"red\">Description</h4>
-          <p>Fever
-            sneesing</p>
+          <p>$desc</p>
           
         </div>
       </div>
@@ -197,8 +199,8 @@ echo "<div class=\"card-panel\">
       <div class=\"panel-body\">
         <div class=\"bio-desk\">
           <h4 class=\"terques\">Prescription</h4>
-          <p>Dolo 650</p>
-          <p>Cetrizines</p>
+          <p>$pre</p>
+          
         </div>
       </div>
     </div>
@@ -208,6 +210,8 @@ echo "<div class=\"card-panel\">
 
 }
 }
+
+
 function search(){
 
 
@@ -217,26 +221,34 @@ if(isset($_POST['patientSearchForm']))
 
     
     $patid= $_POST['pat_id'];
-    $sql = "SELECT * FROM `patient_table` WHERE pat_id ='$patid'";
+    $sql = "SELECT * FROM `patient_display_view` WHERE `pat_id`='$patid'";
     $result = $conn -> query($sql);
     
     if ($result){
-        if($result->num_rows ==1) {
+        if($result->num_rows>0) {
     
     
-            $row = $result->fetch_assoc();
-            $PAT_NAME = $row['pat_name'];
-            $PAT_AGE =$row['pat_age'];
-            $PAT_PHN =$row['pat_phno'];
-            echo "<H2>$PAT_NAME</H2>
-            <H3>AGE: $PAT_AGE</H3>
-            <H3>PHONE: $PAT_PHN</H3>";
-            // header("Location:docdashboard.html");
+            // $row = $result->fetch_assoc();
+            // $PAT_NAME = $row['pat_name'];
+            // $PAT_AGE =$row['pat_age'];
+            // $PAT_PHN =$row['pat_phno'];
+            // echo "<H2>$PAT_NAME</H2>
+            // <H3>AGE: $PAT_AGE</H3>
+            // <H3>PHONE: $PAT_PHN</H3>";
+           return $result;
+
+
+
+
         }
     else{echo "wrong details ";}
         
     }
     else{echo "sql result error $patid";}
+
+
+   
+
 } 
 }
 ?>
