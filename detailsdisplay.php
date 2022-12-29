@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,6 +42,13 @@
               <li>
                 <a href="#"> <i class="fa fa-edit"></i> Edit profile</a>
               </li>
+              <li>
+                <form name="patientSearchForm" action="<?php  search(); ?>" method="post">
+                  <input type="hidden" name="patientSearchForm" value=""/>
+                      <input name="pat_id" type="text" placeholder="Patient_id">
+                      <button type = "submit">Submit</button>
+                  </form>
+              </li>
             </ul>
           </div>
         </div>
@@ -49,13 +59,15 @@
               <h1>Basic Details</h1>
               <div class="row">
                 <div class="bio-row">
-                  <p><span>Age :</span></p>
+                  <p id="d_age"><span>Age :</span></p>
                 </div>
                 <div class="bio-row">
                   <p><span>Gender :</span></p>
                 </div>
                 <div class="bio-row">
                   <p><span>Weight :</span></p>
+
+
                 </div>
                 <div class="bio-row">
                   <p><span>Height :</span></p>
@@ -76,22 +88,33 @@
             </div>
           </div>
           <div class="row">
+            <form action="">
             <div class="form-group col-xs-6">
               <div class="input-group">
-                <input type="text" class="form-control" />
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Submit</button>
-                </span>
+                <!-- <input type="text" class="form-control" /> -->
+                <h4 class="red">Description</h4>
+                <textarea class="form-control" id="Description" name="Description" rows="4" cols="60" required >
+                  </textarea>
+
+                
               </div>
             </div>
             <div class="form-group col-xs-6">
               <div class="input-group">
-                <input type="text" class="form-control" />
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Submit</button>
-                </span>
+                <!-- <input type="text" class="form-control" /> -->
+                <h4 class="terques">Prescription</h4>
+
+                <textarea class="form-control" id="Prescription" name="Prescription" rows="4" cols="60" required>
+                  </textarea>
+                
               </div>
             </div>
+            <div class="input-group-btn">
+            
+                <button class="btn btn-default" type="submit">Submit</button>
+              </span>
+            </div>
+          </form>
           </div>
           <div
             style="
@@ -104,11 +127,12 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="panel">
-                  <div class="panel-body">
-                    <div class="bio-desk">
+                  <div class=" panel-body">
+                    <div class="bio-desk" >
                       <h4 class="red">Description</h4>
-                      <p>Fever</p>
-                      <p>Sneezings</p>
+                      <p>Fever
+                        sneesing</p>
+                      
                     </div>
                   </div>
                 </div>
@@ -132,3 +156,37 @@
     <script type="text/javascript"></script>
   </body>
 </html>
+<?php
+
+function search(){
+
+
+if(isset($_POST['patientSearchForm']))
+{
+    require 'connection.php';
+
+    
+    $patid= $_POST['pat_id'];
+    $sql = "SELECT * FROM `patient_table` WHERE pat_id ='$patid'";
+    $result = $conn -> query($sql);
+    
+    if ($result){
+        if($result->num_rows ==1) {
+    
+    
+            $row = $result->fetch_assoc();
+            $PAT_NAME = $row['pat_name'];
+            $PAT_AGE =$row['pat_age'];
+            $PAT_PHN =$row['pat_phno'];
+            echo "<H2>$PAT_NAME</H2>
+            <H3>AGE: $PAT_AGE</H3>
+            <H3>PHONE: $PAT_PHN</H3>";
+            // header("Location:docdashboard.html");
+        }
+    else{echo "wrong details ";}
+        
+    }
+    else{echo "sql result error $patid";}
+} 
+}
+?>
