@@ -382,7 +382,7 @@ ul.summary-list > li:last-child  {
               padding-top: 2.4%;
               padding-left: 2.4%;
               padding-right: 2.4%;
-              margin-top: 20px;
+              margin-top: 50px;
               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
               background: #FFFFFF;
             
@@ -396,4 +396,25 @@ ul.summary-list > li:last-child  {
 }
 h3.bio-row1{
     margin: 30px;
+}
+.date-sticker{color: white;
+    text-align: center;
+    margin-top:-60px;
+    margin-left: 100px;
+
+    margin-right: -50px;
+     padding:10px;
+     background-color:#2d94fb;
+     border-radius: 10px;
+}
+
+.dr-sticker{color: white;
+    text-align: center;
+    margin-top:-60px;
+    /* margin-left: -100px;
+
+    margin-right: 100px; */
+     padding:10px;
+     background-color:#2d94fb;
+     border-radius: 10px;
 }

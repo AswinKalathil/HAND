@@ -31,7 +31,7 @@ session_start();
                   alt=""
                 />
               </a>
-              <h1>Camila Smith</h1>
+              <h1 id="name_tag">Camila Smith</h1>
               <p>#<span></span></p>
             </div>
 
@@ -45,47 +45,13 @@ session_start();
               <li>
                 <form name="patientSearchForm" action="" method="post">
                   <input type="hidden" name="patientSearchForm" value=""/>
-                      <input name="pat_id" type="text" placeholder="Patient_id">
-                      <button type = "submit" onclick="<?php  search(); ?>">Submit</button>
+                      <input name="pat_id" id="pat_id" type="text" placeholder="Patient_id">
+                      <button type = "" onclick="<?php  search(); ?>  setValues()">Submit</button>
                   </form>
               </li>
+              
               <li>
-              <div class="">
-              <div class="bio-row1">
-              <h3>Basic Details</h1>
-
-                </div>
-
-                <div class="bio-row1">
-                  <p id="d_age"><span>Age :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Gender :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Weight :</span></p>
-
-
-                </div>
-                <div class="bio-row1">
-                  <p><span>Height :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Blood Group :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Mobile :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Receptionist ID :</span></p>
-                </div>
-                <div class="bio-row1">
-                  <p><span>Insurance No:</span></p>
-                </div>
-              </div>
-              </li>
-              <li>
-                <div style="height: 100px;">fxhb</div>
+                <div style="height: 100% !important;">fxhb</div>
               </li>
             </ul>
           </div>
@@ -126,7 +92,7 @@ session_start();
             </div>
           </div>
           <div class="row">
-            <form action="">
+            <!-- <form action=""> -->
             <div class="form-group col-xs-6">
               <div class="input-group">
                 <!-- <input type="text" class="form-control" /> -->
@@ -149,45 +115,72 @@ session_start();
             </div>
             <div class="input-group-btn">
             
-                <button class="btn btn-default" type="submit">Submit</button>
+                <button class="btn btn-default" type="" onclick="insertData()">Submit</button>
               </span>
             </div>
-            </form>
+            <!-- </form> -->
           </div>
-          
-      </div>
-             
-        </div>
-        <div class="row">
+          <div class="row">
               <a href="<?php creatCard(search());  ?>">show</a>
               </div>
+      </div>
+      
+             
+        </div>
+       
     </div>
     
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      function insertData(){
+  
+        var patid = document.getElementById("pat_id").value;
+        console.log(patid);
+      }
+
+
+    </script>
   </body>
 </html>
+
+
+
+
 <?php
+
+$patid;
 'connection.php';
+
+
+
+
 function creatCard($result){
 
 $n=$result->num_rows;
-
+if($n==0)
+{
+  echo "<h3 style;\" pading:20px;\" class=\"date-sticker\">NO HISTORY to </h3>";
+}
 for($i=0;$i<$n;$i++)
 {
   $row = $result->fetch_assoc();
 $desc=$row['pat_desc'];
 $pre=$row['pat_pre'];
+$date=$row['pr_date'];
 
-if($i==1)
-{}
+if($i==0)
+{ echo "good</a><h2 type=\"hiden\" class=\" hist\"></h2>";}
 echo "
 <div class=\"card-panel\">
 <div class=\"row\">
   <div class=\"col-md-6\">
     <div class=\"panel\">
+    
       <div class=\" panel-body\">
         <div class=\"bio-desk\"  >
-          <h4 class=\"red\">Description</h4>
+        
+         
+
+          <h4 class=\"red\" style=\"margin-top:-4px;\" >Description</h4>
           <p>$desc</p>
           
         </div>
@@ -198,6 +191,7 @@ echo "
     <div class=\"panel\">
       <div class=\"panel-body\">
         <div class=\"bio-desk\">
+        <h3 class=\"date-sticker\">$date</h3>
           <h4 class=\"terques\">Prescription</h4>
           <p>$pre</p>
           
@@ -252,3 +246,14 @@ if(isset($_POST['patientSearchForm']))
 } 
 }
 ?>
+<script>
+
+
+function setValues(){
+  var name = "<?php  echo $PAT_NAME; ?>"
+document.getElementById("name_tag").innerHTML = name;
+
+
+}
+       
+</script>

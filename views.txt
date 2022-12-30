@@ -1,0 +1,43 @@
+1.
+CREATE VIEW patient_display_view AS SELECT
+    *
+FROM
+    patient_table
+NATURAL JOIN patient_record_table;
+
+
+
+2.
+CREATE VIEW staff_view AS SELECT
+    `admin_table`.`adm_id` AS `staff_id`,
+    `admin_table`.`adm_pass` AS `staff_pass`
+FROM
+    `admin_table`
+UNION ALL
+SELECT
+    `doctor_table`.`doc_id` AS `doc_id`,
+    `doctor_table`.`doc_pass` AS `doc_pass`
+FROM
+    `doctor_table`
+UNION ALL
+SELECT
+    `receptionist_table`.`rec_id` AS `rec_id`,
+    `receptionist_table`.`rec_pass` AS `rec_pass`
+FROM
+    `receptionist_table`;
+
+
+
+
+for use 
+$row = $result->fetch_assoc();
+            $PAT_NAME = $row['pat_name'];
+            $PAT_AGE =$row['pat_age'];
+            $PAT_GEN =$row['pat_gen'];
+            $PAT_WT =$row['pat_wt'];
+            $PAT_HT =$row['pat_ht'];
+            $PAT_INSU =$row['pat_insu'];
+            $PAT_BG =$row['pat_bg'];
+           
+
+            $PAT_PHN =$row['pat_phno'];
