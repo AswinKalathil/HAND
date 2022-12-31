@@ -184,7 +184,9 @@ $result = $conn -> query($sql);
 if ($result){
     if($result->num_rows ==1) {
         if($myid[0]=='D'&& isset($_POST['doc'])){
-            echo "<script>window.location.href='docdashboard.php';</script>";
+          $_SESSION['docno']=$myid;
+
+            echo "<script>window.location.href='detailsdisplay.php';</script>";
             exit; 
         }
         else if($myid[0]=='A'){
@@ -192,6 +194,7 @@ if ($result){
             exit;
         }
         else if($myid[0]=='R' && isset($_POST['rec'])){
+          $_SESSION['recno']=$myid;
             echo "<script>window.location.href='recDashboard.php';</script>";
             exit;
         }

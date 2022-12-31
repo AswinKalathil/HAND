@@ -36,7 +36,7 @@ function getPatid(){
             <div class="details">
                 <div class="details-header">
                 <h1>New Patient</h1>
-                    <span class="id-display"><h3 id="success-msg" ></h3><h3>REC201</h3></span> 
+                    <span class="id-display"><h3 id="success-msg" ></h3><h3 id="recno">RECNO</h3></span> 
 
                 </div>
             </div>
