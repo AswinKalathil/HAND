@@ -235,6 +235,9 @@ if($n==0)
 {
   echo "<h3 style;\" pading:20px;\" class=\"date-sticker\">NO HISTORY TO SHOW </h3>";
 }
+else{
+
+
 for($i=0;$i<$n;$i++)
 {
   $row = $result->fetch_assoc();
@@ -282,6 +285,7 @@ echo "
 
 }
 }
+}
 
 
 function search(){
@@ -304,7 +308,7 @@ if(isset($_POST['patientSearchForm']))
 
     if($result3)
     {
-      if($result->num_rows > 0) {
+      if($result3->num_rows > 0) {
     
 
       $row3 = $result3->fetch_assoc();
@@ -327,7 +331,7 @@ if(isset($_POST['patientSearchForm']))
     echo "<script>document.getElementById(\"pat_ht\").innerHTML =\"height: $ht\";</script>";
     echo "<script>document.getElementById(\"pat_bg\").innerHTML =\"Blood Group: $bg\";</script>";
     echo "<script>document.getElementById(\"pat_ph\").innerHTML =\"Mobile: $ph\";</script>";
-    echo "<script>document.getElementById(\"pat_inc\").innerHTML =\"Age: $inc\";</script>";
+    echo "<script>document.getElementById(\"pat_inc\").innerHTML =\"Insurance no: $inc\";</script>";
 
 
 
@@ -355,7 +359,12 @@ if(isset($_POST['patientSearchForm']))
 
 
         }
-    else{echo "wrong details ";}
+    else{
+      
+      echo "<script>document.console.log( \"wrong details  no value\")";
+      return $result;
+    
+    }
         
     }
     else{echo "sql result error $patid";}
