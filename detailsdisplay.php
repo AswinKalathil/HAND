@@ -135,7 +135,7 @@ function getPrid(){
                 }
                 ?>">
                 <input type="hidden" name="medform" value="">
-          <h4 class="red">Description</h4>
+          <h4 class="red">Diagnosis</h4>
                 <textarea class="form-control" id="Description" name="Description" rows="4" cols="60" required >
                 
                   </textarea>
@@ -261,7 +261,7 @@ echo "
         
          
 
-          <h4 class=\"red\" style=\"margin-top:-4px;\" >Description</h4>
+          <h4 class=\"red\" style=\"margin-top:-4px;\" >Diagnosis</h4>
           <p>$desc</p>
           
         </div>

@@ -14,7 +14,7 @@ echo "<script>errorfixMessage();</script>";
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="/images/medicine.png">
-    <title>Welcome</title>
+    <title>Hospital Assistance Native Database</title>
   </head>
   <body>
     <div class="hero" style="background-image: url('images/hosp.jpg');    background-size: 55%;
