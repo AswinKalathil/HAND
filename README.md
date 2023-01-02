@@ -1,2 +1,2 @@
 # HAND
-Hospital management system
+Hospital Assistace Native Database
