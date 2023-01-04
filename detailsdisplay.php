@@ -62,7 +62,7 @@ function getPrid(){
                   alt=""
                 />
               </a>
-              <h1  id="name_tag">Camila Smith</h1>
+              <h1  id="name_tag">Name</h1>
               <p>#<span></span></p>
             </div>
 
