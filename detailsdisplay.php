@@ -47,6 +47,8 @@ function getPrid(){
     </script>
   </head>
   <body>
+   <div id="backbtn"> <a href="index.php"><i class="fa fa-chevron-left"> BACK</i></a></div>
+   <!-- <i class="fa fa-chevron-left"> -->
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -145,7 +147,7 @@ function getPrid(){
                 
                 </textarea>
                 <div style=" display:flex; justify-content:right ; padding: 20px;">
-                <button  style="background-color:#2da44e;color:aliceblue" class="btn btn-default" type="" onclick="<?php insertData();  ?>" ><B>INSERT<B></button>
+                <button  style="background-color:#2da44e;color:aliceblue" class="btn btn-default" type="" onclick="<?php insertData();?>" ><B>INSERT<B></button>
 
                 </div>
 
@@ -233,7 +235,7 @@ function creatCard($result){
 $n=$result->num_rows;
 if($n==0)
 {
-  echo "<h3 style;\" pading:20px;\" class=\"date-sticker\">NO HISTORY TO SHOW </h3>";
+  echo "<h3 style;\" padding:20px;\" class=\"date-sticker\">NO HISTORY TO SHOW </h3>";
 }
 else{
 
