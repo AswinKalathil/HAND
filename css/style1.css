@@ -419,30 +419,17 @@ h3.bio-row1{
      border-radius: 10px;
 }
 
-#backbtn{
-    width: 4%;
-    height: 40px;
-    background-color: #2d94fb;
-    position:sticky;
-    float: right;
-    /* border:3px solid #ffffff; */
-    -moz-border-radius:    5px;
-   -webkit-border-radius: 5px;
-    margin-left: 40px;
-    border-radius: 5px;
+button{
+    padding: 10px 10px 10px 36px;
+    font-family: "Trebuchet MS", Arial, Verdana;
+    background:url(/images/left-arrow.png) 10px 10px no-repeat;
+    background-size: 25%;
+    color: #000000;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
 }
 
-#backbtn:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -17px;
-    border-style: solid;
-    border-width: 20px 20px 20px 0;
-    border-color: transparent #2d94fb transparent transparent;
-}
-
-#backbtn > a{
+button > a{
     display: block;
     text-decoration: none;
     text-align: center;
@@ -450,13 +437,8 @@ h3.bio-row1{
     padding-top: 15%;
     font: bold 12px/20px Sans-Serif;
 }
-#backbtn:hover {
-    background-color: lightblue;
-}
 
-#backbtn:hover:before {
-    border-right-color: lightblue;
+button:hover{
+    background-color: lightblue;
+    color: #000000;
 }
-/* #backbtn i{
-    float: right;
-} */

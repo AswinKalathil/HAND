@@ -47,7 +47,8 @@ function getPrid(){
     </script>
   </head>
   <body>
-   <div id="backbtn"> <a href="index.php"><i class="fa fa-chevron-left"> BACK</i></a></div>
+  <a href="index.html"><button>Back</button></a>
+   <!-- <div id="backbtn"> <a href="index.php"><i class="fa fa-chevron-left"> BACK</i></a></div> -->
    <!-- <i class="fa fa-chevron-left"> -->
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
