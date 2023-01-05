@@ -27,9 +27,10 @@ function getPatid(){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-   
+<a href="index.php"><button class="btnb"><i class="fa fa-arrow-circle-left"></i> Back</button></a>
     <div class="patient-details">
         <div class="form">
       

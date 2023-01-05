@@ -25,7 +25,8 @@ function getPrid(){
       href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style1.css" />
+    <link rel="stylesheet" href="css/style1.css?<?php echo time(); ?>" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script>
       
@@ -47,9 +48,7 @@ function getPrid(){
     </script>
   </head>
   <body>
-  <a href="index.html"><button>Back</button></a>
-   <!-- <div id="backbtn"> <a href="index.php"><i class="fa fa-chevron-left"> BACK</i></a></div> -->
-   <!-- <i class="fa fa-chevron-left"> -->
+  <a href="index.php"><button class="btnb"><i class="fa fa-arrow-circle-left"></i> Back</button></a>
     <link
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
       rel="stylesheet"

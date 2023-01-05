@@ -419,17 +419,15 @@ h3.bio-row1{
      border-radius: 10px;
 }
 
-button{
-    padding: 10px 10px 10px 36px;
+button.btnb{
+    padding: 10px 10px 10px 15px;
     font-family: "Trebuchet MS", Arial, Verdana;
-    background:url(/images/left-arrow.png) 10px 10px no-repeat;
-    background-size: 25%;
     color: #000000;
     border-radius: 16px;
     border: 1px solid #e0e0e0;
 }
 
-button > a{
+button.btnb > a{
     display: block;
     text-decoration: none;
     text-align: center;
@@ -438,7 +436,7 @@ button > a{
     font: bold 12px/20px Sans-Serif;
 }
 
-button:hover{
+button.btnb:hover{
     background-color: lightblue;
     color: #000000;
 }
